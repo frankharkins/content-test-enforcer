@@ -1,0 +1,25 @@
+[build-system]
+requires = [ "hatchling",]
+build-backend = "hatchling.build"
+
+[project]
+name = "content-test-enforcer"
+version = "0.0.1"
+description = "Keep code example tests up to date in Jupyter notebooks."
+readme = "README.md"
+requires-python = ">=3.7"
+license = "Apache-2.0"
+dependencies = [ "nbformat",]
+[[project.authors]]
+name = "Frank Harkins"
+email = "frankharkins@hotmail.co.uk"
+
+[project.urls]
+Homepage = "https://github.com/frankharkins/content-test-enforcer"
+"Bug Tracker" = "https://github.com/frankharkins/content-test-enforcer"
+
+[project.scripts]
+content-test-enforcer = "content_test_enforcer:cli_entry_point"
+
+[tool.hatch.build.targets.wheel]
+packages = ["content_test_enforcer"]
